@@ -4,7 +4,7 @@ import cv2
 face_det = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
-#img = cv2.imread("blackpink_2.jpg")
+img = cv2.imread("blackpink_2.jpg")
 
 def bound(img):
     newimg = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
@@ -34,6 +34,7 @@ def bound(img):
             cv2.rectangle(img,point1,point2,color,thickness) 
     return img
 
+bound(img)
 
-        #cv2.imshow("result",img)
-        #cv2.waitKey(0)
+cv2.imshow("result",img)
+cv2.waitKey(0)

@@ -4,7 +4,7 @@ import cv2
 mp_hand = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 
-#img = cv2.imread("hand_1.png")
+img = cv2.imread("hand_1.png")
 
 def handpoint(img):
 
@@ -26,5 +26,6 @@ def handpoint(img):
             cv2.circle(img,(pixX,pixY),4,(0,0,255),-1)
     return img
 
-#cv2.imshow("img",img)
-#cv2.waitKey(0)
+handpoint(img)
+cv2.imshow("img",img)
+cv2.waitKey(0)

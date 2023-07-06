@@ -4,6 +4,8 @@ import cv2
 face_det = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
+img = cv2.imread("blackpink_2.jpg")
+
 def find_max(inputlist):
     maxValue = 0
     for m in inputlist:
@@ -48,3 +50,7 @@ def mosaic(img):
         cv2.rectangle(img,point1,point2,color,thickness)     
 
     return img
+
+mosaic(img)
+cv2.imshow("img",img)
+cv2.waitKey(0)
